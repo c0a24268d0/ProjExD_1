@@ -20,22 +20,22 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        a=-1
-        b=0
+        yoko=-1
+        tate=0
         key_list = pg.key.get_pressed()        #キーの押下状態を取得
         if key_list[pg.K_UP]:
-            a=0
-            b=-1
+            yoko=0
+            tate=-1
         elif key_list[pg.K_DOWN]:
-            a=0
-            b=1
+            yoko=0
+            tate=1
         elif key_list[pg.K_LEFT]:
-            a=-1
-            b=0
+            yoko=-1
+            tate=0
         elif key_list[pg.K_RIGHT]:
-            a=2
-            b=0
-        kk_rect.move_ip((a,b))
+            yoko=2
+            tate=0
+        kk_rect.move_ip((yoko,tate))
         
 
         x=tmr%3200
