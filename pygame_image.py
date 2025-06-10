@@ -20,16 +20,22 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        kk_rect.move_ip((-1,0))
+        a=-1
+        b=0
         key_list = pg.key.get_pressed()        #キーの押下状態を取得
         if key_list[pg.K_UP]:
-            kk_rect.move_ip((0,-1))
+            a=0
+            b=-1
         elif key_list[pg.K_DOWN]:
-            kk_rect.move_ip((0,1))
+            a=0
+            b=1
         elif key_list[pg.K_LEFT]:
-            kk_rect.move_ip((-1,0))
+            a=-1
+            b=0
         elif key_list[pg.K_RIGHT]:
-            kk_rect.move_ip((2,0))
+            a=2
+            b=0
+        kk_rect.move_ip((a,b))
         
 
         x=tmr%3200
