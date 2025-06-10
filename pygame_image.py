@@ -19,6 +19,8 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
+
+        kk_rect.move_ip((-1,0))
         key_list = pg.key.get_pressed()        #キーの押下状態を取得
         if key_list[pg.K_UP]:
             kk_rect.move_ip((0,-1))
@@ -27,7 +29,7 @@ def main():
         elif key_list[pg.K_LEFT]:
             kk_rect.move_ip((-1,0))
         elif key_list[pg.K_RIGHT]:
-            kk_rect.move_ip((1,0))
+            kk_rect.move_ip((2,0))
         
 
         x=tmr%3200
